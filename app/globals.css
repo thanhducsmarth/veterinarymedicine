@@ -1,11 +1,85 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Veterinary Medicine Professional Colors */
+  --vet-primary: #1e40af;
+  --vet-primary-light: #3b82f6;
+  --vet-primary-dark: #1d4ed8;
+  --vet-secondary: #10b981;
+  --vet-secondary-light: #34d399;
+  --vet-accent: #f59e0b;
+  --vet-accent-light: #fbbf24;
+  --vet-warning: #ef4444;
+  --vet-background: #ffffff;
+  --vet-background-light: #f8fafc;
+  --vet-background-muted: #f1f5f9;
+  --vet-foreground: #1f2937;
+  --vet-foreground-muted: #64748b;
+
+  /* Animation */
+  --animation-fade-in: fade-in 0.8s ease-out forwards;
+  --animation-slide-up: slide-up 0.6s ease-out forwards;
+  --animation-scale-in: scale-in 0.5s ease-out forwards;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.fade-in {
+  animation: var(--animation-fade-in);
+}
+
+.slide-up {
+  animation: var(--animation-slide-up);
+}
+
+.scale-in {
+  animation: var(--animation-scale-in);
 }
 
 @theme inline {
+  --color-vet-primary: var(--vet-primary);
+  --color-vet-primary-light: var(--vet-primary-light);
+  --color-vet-primary-dark: var(--vet-primary-dark);
+  --color-vet-secondary: var(--vet-secondary);
+  --color-vet-secondary-light: var(--vet-secondary-light);
+  --color-vet-accent: var(--vet-accent);
+  --color-vet-accent-light: var(--vet-accent-light);
+  --color-vet-warning: var(--vet-warning);
+  --color-vet-background: var(--vet-background);
+  --color-vet-background-light: var(--vet-background-light);
+  --color-vet-background-muted: var(--vet-background-muted);
+  --color-vet-foreground: var(--vet-foreground);
+  --color-vet-foreground-muted: var(--vet-foreground-muted);
+
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
