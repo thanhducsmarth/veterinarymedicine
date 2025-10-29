@@ -75,7 +75,7 @@ const featuredMedicines: Medicine[] = [
 
 export default function Home() {
   const [activeSection, setActiveSection] = useState('home');
-  const [isSidebarOpen, setIsSidebarOpen] = useState(true); // Temporary: set to true to see the sidebar
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false); // Temporary: set to true to see the sidebar
 
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
